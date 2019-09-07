@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+   <script type="text/javascript">
+    function generate()
+    {
+          var pronoun = ['the','our'];
+          var adj = ['great', 'big' ];
+          var noun = ['jogger','racoon'];
+          var domain_array =[];
+          let i=0;
+          let o=0;
+          let u=0;
+          let domain="";
+          for (i = 0; i < pronoun.length; i++)
+        {
+
+           for (o = 0; o < adj.length; o++)
+            {
+
+               for (u = 0; u< noun.length; u++)
+                {
+                    domain = domain.concat(pronoun[i]);
+                    domain = domain.concat(adj[o]);
+                    domain = domain.concat(noun[u]);
+                    domain = domain.concat(".com<br>")
+                    document.getElementById("domain").innerHTML = domain;
+               }
+           }
+
+       }
+
+   }
+       window.onload = generate;
+   </script>
+<body>
+<p id="domain"></p>
+</body>
+</html>
